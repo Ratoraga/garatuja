@@ -1,6 +1,4 @@
-# Garatujas do João
-
-## Garatuja fodastico
+# Garatujas do João :)
 
 
 Throw = Interrompe o código e manda um erro
