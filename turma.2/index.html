@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --grid-info-size: 230px;
+
+      /* paleta baseada na imagem */
+      --color-bg-main: #0d0d0d;
+      --color-bg-hi: #1a1a1a;
+      --color-accent: #8b0000;
+      --color-accent-2: #b30000;
+      --color-text: #e6e6e6;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: grid;
+      grid-template-areas:
+        "social info content"
+        "footer footer footer";
+      grid-template-columns: auto var(--grid-info-size) 1fr;
+      grid-template-rows: 1fr 120px;
+      gap: .5rem;
+      padding: .5rem;
+      min-height: 100svh;
+
+      background-color: var(--color-bg-main);
+      color: var(--color-text);
+    }
+
+    aside {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      grid-area: info;
+    }
+
+    .thumb {
+      width: calc(var(--grid-info-size) - 20px);
+      height: calc(var(--grid-info-size) - 20px);
+      border-radius: 50%;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    aside section {
+      background-color: var(--color-bg-hi);
+      width: 100%;
+      height: 100%;
+      margin-top: -4rem;
+      padding-top: 4rem;
+      z-index: 1;
+      clip-path: polygon(0 20px, 100% 0, 100% 100%, 0 100%);
+    }
+
+    main {
+      grid-area: content;
+      position: relative;
+      isolation: isolate;
+      padding: 1rem;
+    }
+
+    h1 {
+      margin: 0 0 5rem 0;
+      font-size: 5rem;
+      color: var(--color-accent-2);
+    }
+
+    main:before {
+      content: "";
+      background-color: var(--color-bg-hi);
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      clip-path: polygon(
+        0 calc(var(--grid-info-size) - 6rem),
+        100% calc(var(--grid-info-size) - 10rem),
+        100% 100%,
+        0 100%
+      );
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery div {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      background-color: #111;
+      padding: .5rem;
+      border: 1px solid var(--color-accent);
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      background-color: #000;
+    }
+
+    .social {
+      grid-area: social;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .social img {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    footer {
+      grid-area: footer;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <aside>
+    <div class="thumb">
+      <img src="assets/jui.png">
+    </div>
+    <section></section>
+  </aside>
+
+  <main>
+    <article>
+      <h1>Joui Jouki</h1>
+      <p>
+        Joui Jouki é um agente da Ordo Realitas que decidiu adaptar seus métodos após uma primeira missão traumática.
+        Ele é um guerreiro de corpo e alma, treinando a sua vida toda para proteger aqueles que ama, cogitando se sacrificar
+        pelos que quer proteger.
+      </p>
+    </article>
+
+    <div class="gallery">
+      <div>
+        <p>Joui Jouki no começo de sua aventura, ainda sem noção de tudo que iria passar</p>
+        <img src="assets/juii.png">
+      </div>
+
+      <div>
+        <p>Joui Jouki em sua segunda missão, após perceber que talvez seus esforços não seriam o suficiente</p>
+        <img src="assets/juiiii.webp">
+      </div>
+
+      <div>
+        <p>Joui Jouki ao se sacrificar para a Seita das Mascaras em troca de salvar seus amigos</p>
+        <img src="assets/juiiiii.webp">
+      </div>
+
+      <div>
+        <p>Joui Jouki após ser libertado da Seita das Mascaras pelo próprio Diabo para impedir a Calamidade</p>
+        <img src="assets/juiiiiii.webp">
+      </div>
+    </div>
+  </main>
+
+  <div class="social">
+    <a href="#"><img src="assets/facebook.png"></a>
+    <a href="#"><img src="assets/twitter.png"></a>
+    <a href="#"><img src="assets/instagram.png"></a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Ratão</p>
+  </footer>
+
+</body>
+
+</html>
