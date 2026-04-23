@@ -11,3 +11,10 @@ Static = É um método pertencente a uma classe, não a um objeto, como por exem
 Getter = Um tipo de método que pode ser acessado como propriedade, caso uma propriedade precise ser calculada ao invés de ser colocada pronta
 Setter = É para alterar uma propriedade que seja Protected ou para caso exista uma regra que o atributo deve seguir (Ex.: ser um ano válido ou ter uma quantidade mínima d letras)
 Coisas extras: É melhor possuir um método especial para validar se a propriedade é valida e caso seja nescessário é só puxar o método
+
+
+## PERGUNTAS
+
+Oque é POO?
+Qual a diferença entre POO e PE?
+Oque é Static?
