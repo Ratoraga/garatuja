@@ -18,3 +18,11 @@ Coisas extras: É melhor possuir um método especial para validar se a proprieda
 Oque é POO?
 Qual a diferença entre POO e PE?
 Oque é Static?
+
+
+## COMANDOS HACKERMAN FODASTICOS
+
+git clone https://<<token>>@<<link_do_repositorio>> projeto
+code --user-data-dir=vscodedata projeto
+
+sapoha aq basicamente faz com q sempre q tu mudar d PC vc puxa o repositorio pro PC e as config do VSCode :)
